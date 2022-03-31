@@ -1,0 +1,31 @@
+Analysis
+
+This third assignment of the PDP course consists of a total of 5 C files, two header files, two source files, and one test file. These files:
+
+1.	Random.h
+2.	Random.c
+3.	RastgeleKarakter.h
+4.	RastgeleKarakter.c
+5.	Test.c
+
+To ensure the security and modularity of the codes, we kept prototypes of the codes in the title files and the bodies of the original codes in the source files.
+
+We've created the title files with the structure #ifndef-#endif, filling its contents with prototypes. We've added the necessary libraries to the first title file, Random.h. The source files contain functions that make up parts of prototypes that contain bodies.
+
+We've created the main lines of the library with the structure structure in the Random.h library. By creating an alphabetical sequence, we've added a series that makes it easier to add the alphabet of any language to the code without having to adjust the language part of the computer. The type of return, which is our function for Random number generation, is the prototype of the long numb() function. A prototype of the randChar() function, which switches the generated number to alphabetical mode and returns the value of the obtained number in the alphabetical sequence. Other than that, there is a prototype of the destroyRandom() function, which cleans the areas in which the structure is stored in the memory and depleted the memory.
+
+The Random.c source file is the file that contains the bodies of the functions in the Random.h header file. Random.h the new name of the structure is set as “Random” with the typedef line created to make comfortable use of the structure created. We first added the Random.h file to the source file. With createRandom (), we created the structure of the structure in the Random.h file. This is where we assigned the contents of the alphabet sequence. Malloc and I have made sure that the structure has space for the memory. the numb() function is the structure that creates a random number by addressing system time. But because the C language read the system time too quickly, we obtained different results using the "sleep (1)" command to avoid the same results. The randChar() function returns this variable by taking the length of the alphabetical sequence of the number obtained with the help of the numb() function and assigning it to the char variable after the required checks have been made. Finally, the destroyRandom() function clears the area in which the generated structure is located in the memory.
+
+The RastgeleKarakter.h library only adds Random.h libraries to get all the necessary libraries. It includes prototypes that indicate a similar structure and its functions as well as the Random.h library, and that it contains one destructive function. The difference between the Random.h library and the Random.h structure is the “Random r;” line, which allows it to be built here. We have identified the name of the structure created by the typedef structure as “Rastkart”.
+
+RastgeleCharacter.c source file, createRast () and the structure of the structure. we've allocated the memory space for the malloc and the construct. In this structure, createRandom () and I have created the random structure structure, as we need to get help from the Random library in the functions we use here. In this library, unlike the Random.h libraries, we also used the mallok for separate memory allocation for the series defined within the functions that rotate the array as a return value. The functions and contents used in this source file are described below in order.
+
+The rndMnyChr() function receives a value value value from one extradan. This function produces up to a count of characters and transfers them sequentially to the defined char sequence. Finally, this sequence is returned.
+
+snt2chr () this function receives two additional int parameters. In this function, the random number obtained from the numb() function is processed by the mode of the second and larger number. The result is determined whether the result is greater than the first number and the resulting result is returned.
+
+The SntChrArr() function takes a char series as a parameter from the exrtt. Because more than one character is generated in this function, one count variable is set and this variable is assigned the value from the numb() function. Up to the number of characters generated. But the only difference is that the generated characters are produced by the elements of the array that are sent to the function, not by the alphabet that we set. The final produced series is returned.
+
+the sentence() function receives the word parameter that indicates the number of words from the extras. the space variable in this function (the variable that determines how many emptiness there is in the sentence. word-1.) is the size of the variable to you (total space + 10 with spaces. Sets the length of the sentence.), the word Length variable (determines the word length. size/word). The sentence to be created is returned to the sentence series using the malloc.
+
+Test.c is a C file created with printf() s for testing this library.
